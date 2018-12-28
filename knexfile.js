@@ -9,9 +9,23 @@ module.exports = {
             password: process.env.GOAL_TRACKER_PASSWORD || '',
         }
     },
+    staging: {
+        client: 'postgresql',
+        connection: {
+            database: 'dcr5ahddkgtq2n',
+            host: 'ec2-54-225-150-216.compute-1.amazonaws.com',
+            user: 'evhbdhmifqmgoh',
+            password: 'eb2d3d4c3f49986f466515e5652ced654886ffb243d212a08dcd0659cd75f460'
+        }
+    },
 
     production: {
         client: 'postgresql',
-        connection: process.env.DATABASE_URL,
+        connection: {
+            database: 'dcr5ahddkgtq2n',
+            host: 'ec2-54-225-150-216.compute-1.amazonaws.com',
+            user: 'evhbdhmifqmgoh',
+            password: 'eb2d3d4c3f49986f466515e5652ced654886ffb243d212a08dcd0659cd75f460'
+        }
     }
 };
